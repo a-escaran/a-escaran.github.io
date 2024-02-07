@@ -1,0 +1,258 @@
+body {
+    background-image: url("./bg.jpg");
+    position: relative; /* Ensure the body is positioned */
+}
+
+
+.inmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding-right: 280px; /* Adjust according to the width of the .rrcon container */
+    padding-left: 280px; /* Adjust according to the width of the .lrcon container */
+}
+
+.cmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding-right: 280px; /* Adjust according to the width of the .rrcon container */
+    padding-left: 280px; /* Adjust according to the width of the .lrcon container */
+}
+
+.mmain {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carousel {
+    width: 70%;
+    margin-top: 20px; /* Adjust spacing between message and carousel */
+}
+.carousel-message {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust spacing between message and carousel */
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center; /* Center images horizontally */
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px; /* Adjust font size */
+    height: 30px; /* Adjust button height */
+    width: 30px; /* Adjust button width */
+    line-height: 30px; /* Center the icon vertically */
+    text-align: center; /* Center the icon horizontally */
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 20px; /* Adjust icon size */
+    width: 20px; /* Adjust icon size */
+}
+
+.carousel-img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 100%; /* Ensure images don't exceed container height */
+    transition: transform 0.5s;
+}
+
+.carousel-img:hover {
+    transform: translateY(-10px);
+}
+
+.lmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    width: 650px;
+    height: 600px;
+    background-color: #ff99cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    width: 400px;
+    height: 285px;
+}
+
+.l1 {
+    width: 150px !important;
+    height: 300px !important; 
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-content h4 {
+    color: #0390fc;
+    margin-bottom: 10px;
+}
+
+
+.centered-div {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(252, 3, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    margin-top: 10px;
+    background-color: #ff99cc; /* Lighter pink color for button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lrcon {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position relative to the body */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure the roses are above the footer */
+}
+
+.rrcon {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position relative to the body */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure the roses are above the footer */
+}
+
+footer {
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; /* Set a lower z-index to ensure the footer is below the roses */
+}
+
+.lvinecon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 10px;
+    z-index: 0; /* Set a lower z-index to ensure the vines are below the footer */
+}
+
+.rvinecon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 0; /* Set a lower z-index to ensure the vines are below the footer */
+}
+
+.rs {
+    width: 150px;
+    height: 200px;
+}
+
+.rv {
+    width: 250px;
+    height: 300px;
+}
+
+.lv {
+    width: 250px;
+    height: 300px;
+}
+
+.welcome-card {
+    background-color: #ff99cc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 3s ease forwards; /* Animation for text appearance */
+}
+
+.welcome-text {
+    opacity: 0; /* Start with text hidden */
+    animation: fadeIn 3s ease forwards; /* Animation for text appearance */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.menu-button {
+    background-color: #ff99cc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
